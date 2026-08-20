@@ -8,7 +8,7 @@ An **array** (Python `list`) is contiguous, index-addressable memory — O(1) ra
 
 ## Where it's applied
 
-Anything sequential and index-based (lists, strings, buffers) uses arrays by default. Hash maps show up whenever the question is "have I seen this?", "how many times?", or "what belongs with what?" — deduplication, frequency counts, grouping by a computed key.
+Anything sequential and index-based (lists, strings, buffers) uses arrays by default. Hash maps show up whenever the question is "have I seen this?", "how many times?", or "what belongs with what?" deduplication, frequency counts, grouping by a computed key.
 
 ## Complexity cheat sheet
 
