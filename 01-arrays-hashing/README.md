@@ -7,9 +7,7 @@
 An **array** (Python `list`) is contiguous, index-addressable memory — O(1) random access, O(n) insert/delete in the middle. A **hash map/set** (`dict`/`set`) trades that ordering for near O(1) average lookup, insert, and delete by hashing keys to a bucket. Most of this topic is about noticing when a hash map can replace a nested loop.
 
 ## Where it's applied
-
-Anything sequential and index based (lists, strings, buffers) uses arrays by default. Hash maps show up whenever the question is "have I seen this?", "how many times?", or "what belongs with what?" deduplication, frequency counts, grouping by a computed key.
-
+Anything sequential and index-based (lists, strings, buffers) uses arrays by default. Hash maps show up whenever the question is "have I seen this?", "how many times?", or "what belongs with what?" deduplication, frequency counts, grouping by a computed key.
 ## Complexity cheat sheet
 
 Array: index O(1), search O(n), append O(1) amortized, mid insert/delete O(n).

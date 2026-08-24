@@ -37,12 +37,9 @@ Each topic below has its own folder with a `README.md` (concept write-up: what i
 
 ## Study approach
 
-**Phase 1 — Understand.** Go topic by topic in the order above: what the structure is, where it shows up in the real world, its time/space complexity, and the core algorithms/patterns tied to it — each walked through as pseudocode, then brute-force, then optimized, with the reasoning for why the optimized version works.
+**Phase 1 — Understand.** Go topic by topic in the order above: what the structure is, where it shows up in the real world, its time/space complexity, and the core algorithms/patterns tied to it each walked through as pseudocode, then brute force, then optimized, with the reasoning for why the optimized version works.
 
 **Phase 2 — Solve.** Once a topic is understood, work through its mapped Blind 75 problems in `problems/`.
 
-## Schedule (rough)
 
-Days 1–2: Arrays & Hashing · Day 3: Two Pointers · Day 4: Sliding Window · Day 5: Stack · Day 6: Binary Search · Days 7–8: Linked List · Days 9–10: Trees · Day 11: Tries + Heap/Priority Queue · Day 12: Backtracking · Days 13–14: Graphs.
-
-Advanced Graphs, both DP sections, Intervals, Greedy, Bit Manipulation, and Math/Geometry get picked up once problem-solving is underway in week 3+.
+Advanced Graphs, both DP sections, Intervals, Greedy, Bit Manipulation, and Math/Geometry get picked up once problem-solving is underway 
