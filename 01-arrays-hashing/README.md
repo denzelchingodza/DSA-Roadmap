@@ -4,7 +4,7 @@
 
 ## What it is
 
-An **array** (Python `list`) is contiguous, index-addressable memory — O(1) random access, O(n) insert/delete in the middle. A **hash map/set** (`dict`/`set`) trades that ordering for near O(1) average lookup, insert, and delete by hashing keys to a bucket. Most of this topic is about noticing when a hash map can replace a nested loop.
+An **array** (Python `list`) is contiguous, index addressable memory O(1) random access, O(n) insert/delete in the middle. A **hash map/set** (`dict`/`set`) trades that ordering for near O(1) average lookup, insert, and delete by hashing keys to a bucket. Most of this topic is about noticing when a hash map can replace a nested loop.
 
 ## Where it's applied
 Anything sequential and index-based (lists, strings, buffers) uses arrays by default. Hash maps show up whenever the question is "have I seen this?", "how many times?", or "what belongs with what?" deduplication, frequency counts, grouping by a computed key.
@@ -44,5 +44,5 @@ Four patterns keep reappearing worth naming explicitly since spotting *which one
 
 - **Valid Anagram's length check isn't just a speed-up.** Without it, `s = "ab"`, `t = "a"` slips through as `True` — the second loop only checks that every letter in `t` exists in `s`'s counts, it never confirms `t` used up *all* of `s`'s letters. The length check forces the comparison both ways.
 - **`counts.get(ch, 0) + 1`** is doing the "treat missing key as 0" job without the default, the first time a letter shows up it'd raise `KeyError`.
-- **Group Anagrams' key choice matters for cost, not just correctness** — `''.join(sorted(s))` costs `O(k log k)` per string; a 26-length character-count tuple would get the same correctness in `O(k)` instead, since it skips the sort. Worth trying as a follow-up variant.
-- `product_array.py` currently sits at the topic root rather than in `problems/` like the others — harmless, just inconsistent with the rest; move it in whenever convenient.
+- **Group Anagrams' key choice matters for cost, not just correctness** `''.join(sorted(s))` costs `O(k log k)` per string; a 26-length character-count tuple would get the same correctness in `O(k)` instead, since it skips the sort. Worth trying as a follow-up variant.
+- `product_array.py` currently sits at the topic root rather than in `problems/` like the others harmless, just inconsistent with the rest; move it in whenever convenient.

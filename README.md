@@ -17,7 +17,7 @@ Each topic below has its own folder with a `README.md` (concept write-up: what i
 ## Roadmap (NeetCode order)
 
 - [x] 01. Arrays & Hashing — in progress (5/8 problems solved)
-- [ ] 02. Two Pointers
+- [x] 02. Two Pointers
 - [ ] 03. Sliding Window
 - [ ] 04. Stack
 - [ ] 05. Binary Search
