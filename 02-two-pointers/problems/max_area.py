@@ -24,7 +24,7 @@ def max_area(height):
     best = 0
     for i in range(len(height)):
         for j in range(i + 1, len(height)):
-            width = j - 1
+            width = j - i
             shorter_wall = min(height[i], height[j])
             area = width * shorter_wall
             best = max(best, area)
@@ -32,9 +32,8 @@ def max_area(height):
 # Time O(n^2)
 
 #---------------------------------OPTIMIZED (two pointers)------------------------------------------
-def max_height(height):
-    left = 0 
-    right = len(height) - 1
+def max_area(height):
+    left, right = 0, len(height) - 1
     best = 0
 
     while left < right:
