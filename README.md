@@ -19,7 +19,7 @@ Each topic below has its own folder with a `README.md` (concept write-up: what i
 - [x] 01. Arrays & Hashing — in progress (5/8 problems solved)
 - [x] 02. Two Pointers
 - [x] 03. Sliding Window
-- [ ] 04. Stack
+- [x] 04. Stack
 - [ ] 05. Binary Search
 - [ ] 06. Linked List
 - [ ] 07. Trees
