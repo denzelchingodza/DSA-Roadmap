@@ -1,6 +1,6 @@
 # Stack
 
-> Status: In progress — 3/4 problems solved so far (Valid Parentheses, Min Stack, Evaluate Reverse Polish Notation). Daily Temperatures and Car Fleet (monotonic stack) not started.
+> Status: Core topic complete — 5/5 problems solved (Valid Parentheses, Min Stack, Evaluate Reverse Polish Notation, Daily Temperatures, Car Fleet). Largest Rectangle in Histogram intentionally left for later — it's the hardest problem in this topic and usually tackled after more practice.
 
 ## What it is
 
@@ -20,6 +20,8 @@ Push, pop, and peek (look at the top without removing it) are all O(1) — you'r
 
 Picture a stack of plates. You can only ever take the top plate off, or put a new plate on top. If you need to know what's underneath the top plate, you can't just look — you'd have to remove plates one at a time until you get there, and by definition, whatever you remove last was put there first. Every stack problem is some version of: "keep a pile of things I'm not done with yet, and the moment I find out what resolves the most recent one, deal with it, then check what's now on top."
 
+**Monotonic stack** is the pattern behind Daily Temperatures and Car Fleet: keep the stack in sorted order as an invariant, and popping means "this element can no longer be the answer for anything after it, because something better just showed up" — a different reason to pop than the matching problems, but still just a stack underneath.
+
 ## The process
 
 1. Is there a "most recent unresolved thing" in this problem? If yes, stack. If the order that gets resolved doesn't matter, it's not a stack problem.
@@ -35,14 +37,15 @@ Picture a stack of plates. You can only ever take the top plate off, or put a ne
 | Valid Parentheses | `problems/valid_paranthesis.py` | Matching/nesting | Closing bracket must match whatever's currently on top — LIFO is exactly what makes "most-recently-opened closes first" checkable. |
 | Min Stack | `problems/min_stack.py` | Design — precompute at push time | Push `(value, min_so_far)` pairs instead of just values — popping automatically "reverts" the minimum for free, no recomputation needed. |
 | Evaluate Reverse Polish Notation | `problems/eval.py` | Direct real-world stack use | Numbers get pushed; an operator pops the two most recent operands, computes, and pushes the result back for future operators to use. |
+| Daily Temperatures | `problems/daily_temperatures.py` | Monotonic stack (indices) | Each warmer day resolves every colder day still waiting, possibly several at once — push/pop indices, not temperatures, so you can compute wait-time. |
+| Car Fleet | `problems/car_fleet.py` | Monotonic stack (arrival times) | Process cars nearest the destination first; a car merges into (doesn't push onto) the stack if it would catch up to the fleet ahead, otherwise it's a new, slower fleet. |
 
 ## Still to do
 
-- [ ] Daily Temperatures — monotonic stack (keep indices in decreasing-temperature order, popping whenever a warmer day breaks that order)
-- [ ] Car Fleet — monotonic stack applied to arrival times
-- [ ] Largest Rectangle in Histogram — hardest of this topic, save for last
+- [ ] Largest Rectangle in Histogram — monotonic stack + area calculation, hardest problem in this topic, save for after more practice
 
 ## Notes / gotchas
 
 - In Evaluate Reverse Polish Notation, operand order matters for `-` and `/`: the second pop is always the operand that appeared earlier in the original expression, so it goes on the **left** — `right - left`, not `left - right`, would silently flip the sign.
 - Min Stack's trick (store extra state alongside each stack entry, computed once at push time) is worth remembering as its own reusable idea — it comes up again in harder stack problems.
+- Daily Temperatures and Car Fleet both push **indices or computed values**, not raw input values directly — worth noticing as a pattern: monotonic stack problems almost always need to push something you can use to compute an answer later (an index for distance, an arrival time for comparison), not just the bare element.
