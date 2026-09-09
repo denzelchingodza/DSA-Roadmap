@@ -8,7 +8,7 @@ Not just solved problems for each topic, I want to actually understand:
 - what the data structure is and how it works under the hood
 - what operations you can do on it, and their time/space cost
 - which algorithms/techniques get applied to it, and when to reach for each one
-- the math underneath why these techniques actually work
+- the math underneath why these techniques actually work.
 
 ## How this repo is organized
 
