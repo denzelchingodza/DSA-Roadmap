@@ -16,9 +16,9 @@ Each topic below has its own folder with a `README.md` (concept write-up: what i
 
 ## Roadmap (NeetCode order)
 
-- [ ] 01. Arrays & Hashing — in progress (5/8 problems solved)
-- [ ] 02. Two Pointers — in progress (3/5 problems solved)
-- [ ] 03. Sliding Window — in progress (3/4 core problems solved)
+- [x] 01. Arrays & Hashing — in progress (5/8 problems solved)
+- [x] 02. Two Pointers — in progress (3/5 problems solved)
+- [x] 03. Sliding Window — in progress (3/4 core problems solved)
 - [x] 04. Stack — core topic complete (5/5), Largest Rectangle in Histogram left for later
 - [x] 05. Binary Search — core topic complete (5/5), Time Based Key-Value Store and Median of Two Sorted Arrays left for later
 - [ ] 06. Linked List
