@@ -6,7 +6,7 @@ def binary_search(nums, target):
     left, right = 0, len(nums) - 1
 
     while left <= right:
-        mid = (left + right) // 2 #integer division, always lands on a valid index
+        mid = (left + right) // 2 # could use mid = left + [(right - left)//2] this is for overflow 
         if nums[mid] == target:
             return mid
         elif nums[mid] < target:
