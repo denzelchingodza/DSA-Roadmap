@@ -22,7 +22,7 @@ Each topic below has its own folder with a `README.md` (concept write-up: what i
 - [x] 04. Stack — core topic complete (5/5), Largest Rectangle in Histogram left for later
 - [x] 05. Binary Search — core topic complete (5/5), Time Based Key-Value Store and Median of Two Sorted Arrays left for later
 - [x] 06. Linked List — core topic complete (5/5), Merge K Sorted Lists left for later
-- [ ] 07. Trees
+- [ ] 07. Trees — in progress (3/8 core problems solved)
 - [ ] 08. Tries
 - [ ] 09. Heap / Priority Queue
 - [ ] 10. Backtracking
