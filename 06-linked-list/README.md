@@ -10,7 +10,7 @@ those pointers.
 
 That's the whole tradeoff versus an array: you lose instant index access
 (getting to node 5 means walking through nodes 0-4 first, no shortcuts),
-but you gain cheap insertion/removal — deleting a node you're already
+but you gain cheap insertion/removal deleting a node you're already
 standing at is just rewiring two pointers (O(1)), no shifting of other
 elements required.
 A **singly** linked list only has `next` pointers (forward only). A
